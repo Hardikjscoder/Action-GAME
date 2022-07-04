@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    user-select: none;
+}
+
+body {
+    background: linear-gradient(rgba(255, 0, 0, .1), rgba(0,0,255, .1)) , url(/assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heading {
+    font-size: 2rem;
+    padding: 1em;
+    color: white;
+    letter-spacing: 1px;
+}
+
+
+.villian {
+    bottom: 0;
+    left: 80vw;
+    background: url(/assets/villian.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 500px;
+}
+
+.hero {
+    bottom: 0;
+    left: 5vw;
+    background: url(/assets/hero.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 250px;
+}
+
+.hero, .villian{
+    position: absolute;
+}
+
+.animateHero {
+    animation: animateHero 700ms linear;
+}
+
+.animateVillian {
+    animation: animateVillian 5s linear infinite;
+}
+
+@keyframes animateHero {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 55vh;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes animateVillian {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+.game-over-container {
+    width: 20rem;
+    background: black;
+    position: absolute;
+    top: 43%;
+    left: 38%;
+    text-align: center;
+}
+
+#gameOver {
+    display: none;
+}
+
+.button {
+    display: grid;
+    place-items: center;
+    height: 65vh;
+}
+
+button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50pc;
+    padding: 1em;
+    color: white;
+    cursor: pointer;
+    text-transform: capitalize;
+    width: 14rem;
+    margin-inline: auto;
+    font-size: large;
+}
+
+button:hover, button:focus {
+    outline: none;
+}
+
+#restart {
+    display: none;
+    position: absolute;
+    top: 5rem;
+}
+
+#new-level {
+    text-align: center;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
